@@ -8,7 +8,10 @@ from .models import DataStore
 
 class CSVDataReadView(APIView):
     def get(self, request):
-        data_update_res = data_read_service('reader/csv_folder/data.csv')
+        # if s3 path
+        # data_update_res = data_read_service('http://samplecsvs.s3.amazonaws.com/Sacramentorealestatetransactions.csv', external_link=True)
+
+        data_update_res = data_read_service('reader/csv_folder/data.csv', external_link=False)
         if data_update_res:
             all_objects = DataStore.objects.all()
             serializer_data = DataStoreSerializer(all_objects, many=True).data

@@ -8,4 +8,4 @@ djangorestframework
 markdown
 django-filter
 python-dateutil
-shortuuid
+requests
