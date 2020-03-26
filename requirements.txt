@@ -1,0 +1,11 @@
+
+django
+django-cors-headers
+django-extensions
+django-filter
+django-storages
+djangorestframework
+markdown
+django-filter
+python-dateutil
+shortuuid
